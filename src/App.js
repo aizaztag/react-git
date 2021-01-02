@@ -1,10 +1,20 @@
 import './App.css';
+import MovieList from './MovieList'
+import Nav from './Nav'
+import {MovieProvider } from './MovieListContext'
+import AddMovie  from './AddMovie'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>This is a master Branch</h1>
-    </div>
+    <MovieProvider>
+      <div className="App">
+        <Nav />
+        <AddMovie />
+        <MovieList />
+      </div>
+    </MovieProvider>
   );
 }
 
