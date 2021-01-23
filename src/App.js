@@ -1,9 +1,10 @@
 import './App.css';
+import  Game  from "./Game.js";
 
 function App() {
   return (
     <div className="App">
-      <h1>This is a master Branch</h1>
+      <Game />
     </div>
   );
 }
