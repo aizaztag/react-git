@@ -1,9 +1,11 @@
 import './App.css';
+import SetStates  from  './SetStates';
+import Counter  from  './Reducer';
 
 function App() {
   return (
     <div className="App">
-      <h1>This is a master Branch</h1>
+      <Counter/>
     </div>
   );
 }
