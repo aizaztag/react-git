@@ -1,11 +1,26 @@
 import './App.css';
 
+import {React  ,useState} from "react";
+import ThemeContext from "./Context/ThemeContext";
+import Main from "./MainWithClass";
+import Header from "./Header";
+
+
+
 function App() {
+  const themeHook = useState("light");
   return (
-    <div className="App">
-      <h1>This is a master Branch</h1>
-    </div>
+    <ThemeContext.Provider value = {themeHook}>
+      <div>
+        <Header />
+        <Main />
+        
+      </div>
+    </ThemeContext.Provider>
   );
 }
+
+
+
 
 export default App;
