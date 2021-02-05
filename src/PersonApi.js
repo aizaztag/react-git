@@ -4,7 +4,7 @@ const fetchPerson = () => {
       .then(x => x.results[0]);
   };
   
-  const wrapPromise = promise => {
+  export const wrapPromise = promise => {
     let status = "pending";
     let result = "";
     let suspender = promise.then(
@@ -37,10 +37,15 @@ const fetchPerson = () => {
   export const printName = () => {
     return new Promise(res => setTimeout(() => res('fdfdf'), 3000));
   }
+
+  export const TestPromise = () => {
+     return new Promise(res => setTimeout(() => res('tested') , 3000 ))
+  }
   export const createResource = () => {
     return {
       person: wrapPromise(fetchPerson()),
       num: wrapPromise(randomNumber()),
-      name: wrapPromise(printName())
+      name: wrapPromise(printName()),
+      test: wrapPromise(TestPromise())
     };
   };
